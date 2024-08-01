@@ -19,3 +19,42 @@ int main(){
     fclose(yyin);
     return 0;
 }
+
+
+
+[2:43 PM] Davange, Pratik
+- name: Create an HTML file in the Nginx web root
+
+  copy:
+
+    dest: /var/www/html/index.html
+
+    content: |
+
+      <!DOCTYPE html>
+
+      <html>
+
+      <head>
+
+          <title>Welcome to Nginx</title>
+
+      </head>
+
+      <body>
+
+          <h1>Hello from Ansible!</h1>
+
+          <p>This is a simple HTML file served by Nginx.</p>
+
+      </body>
+
+      </html>
+
+    owner: www-data
+
+    group: www-data
+
+    mode: '0644'
+
+ 
